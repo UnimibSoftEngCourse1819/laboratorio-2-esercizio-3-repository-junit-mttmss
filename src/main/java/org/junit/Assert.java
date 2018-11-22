@@ -1054,4 +1054,8 @@ public class Assert {
         if(o1 < o2)
             fail("assertGreaterThan Failed");
     }
+    
+    public static <T> void assertGreaterThan(T o1, T o2, java.util.Comparator<T> comparator) {
+        comparator.compare(o1, o2);
+    }
 }
